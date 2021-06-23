@@ -57,11 +57,11 @@ public class algorithm {
         ArrayList<Node> closed = new ArrayList<Node>();
 
 
-        boolean left;
+        boolean belokkiri;
         if(body.get(0)[0] < foodx)
-            left = true;
+            belokkiri = true;
         else if(body.get(0)[0] > foodx)
-            left = false;
+            belokkiri = false;
         else{
             if(body.get(0)[1] < foody)
                 return "down";
@@ -91,7 +91,7 @@ public class algorithm {
                 break;
             } else
             {
-                grid = findnbors(current, end, grid, open, closed);
+                grid = findneighbors(current, end, grid, open, closed);
             }
         }
 
@@ -138,7 +138,7 @@ public class algorithm {
         return least;
     }
 
-  Node[][] findnbors(Node current, Node endn, Node[][] grid, ArrayList<Node> open, ArrayList<Node> closed)
+  Node[][] findneighbors(Node current, Node endn, Node[][] grid, ArrayList<Node> open, ArrayList<Node> closed)
     {
         int side = 1;
         int cx = current.x;
