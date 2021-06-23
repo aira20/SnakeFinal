@@ -19,7 +19,7 @@ public class snake extends JFrame implements  KeyListener, ActionListener
      static ArrayList<Integer>  arrayx;      //to store x point of the snake
      static ArrayList<Integer>  arrayy;     //to store y point of the snake
      Timer waktu;
-     int delay=10;                        //Speed of snake
+     int delay=100;                        //Speed of snake
      static algorithm obj=new algorithm();
     public snake()
     {
